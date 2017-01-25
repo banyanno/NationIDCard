@@ -1,0 +1,556 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="3.5" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{00A066E8-6559-47AF-BA07-3473778DCF3E}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <StartupObject>IDCardVerificationPrint.My.MyApplication</StartupObject>
+    <RootNamespace>IDCardVerificationPrint</RootNamespace>
+    <AssemblyName>IDCardVerificationPrint</AssemblyName>
+    <FileAlignment>512</FileAlignment>
+    <MyType>WindowsForms</MyType>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <OptionExplicit>Off</OptionExplicit>
+    <OptionCompare>Binary</OptionCompare>
+    <OptionStrict>Off</OptionStrict>
+    <OptionInfer>Off</OptionInfer>
+    <ApplicationManifest>My Project\app.manifest</ApplicationManifest>
+    <ApplicationIcon>1454069796_32.ID-Vertical.ico</ApplicationIcon>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <TargetFrameworkSubset>
+    </TargetFrameworkSubset>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>false</DefineTrace>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DocumentationFile>IDCardVerificationPrint.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+    <PlatformTarget>x86</PlatformTarget>
+    <RemoveIntegerChecks>false</RemoveIntegerChecks>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <WarningLevel>0</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>Full</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>false</DefineTrace>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DocumentationFile>IDCardVerificationPrint.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+    <DebugSymbols>true</DebugSymbols>
+    <PlatformTarget>x86</PlatformTarget>
+    <RemoveIntegerChecks>false</RemoveIntegerChecks>
+    <GenerateSerializationAssemblies>Off</GenerateSerializationAssemblies>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <WarningLevel>0</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Accessibility" />
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=10.5.3700.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="CrystalDecisions.Enterprise.Framework, Version=10.5.3700.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="CrystalDecisions.Enterprise.InfoStore, Version=10.5.3700.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="CrystalDecisions.ReportSource, Version=10.5.3700.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="CrystalDecisions.Shared, Version=10.5.3700.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="CrystalDecisions.Windows.Forms, Version=10.5.3700.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="Interop.CRAXDDRT, Version=10.5.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\UsingCrystalReport\UsingCrystalReport\bin\Debug\Interop.CRAXDDRT.dll</HintPath>
+    </Reference>
+    <Reference Include="Interop.CrystalActiveXReportViewerLib105, Version=10.5.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\UsingCrystalReport\UsingCrystalReport\bin\Debug\Interop.CrystalActiveXReportViewerLib105.dll</HintPath>
+    </Reference>
+    <Reference Include="Janus.Data.v3, Version=3.5.0.0, Culture=neutral, PublicKeyToken=null" />
+    <Reference Include="Janus.Windows.Common.v3, Version=3.5.0.0, Culture=neutral, PublicKeyToken=null" />
+    <Reference Include="Janus.Windows.ExplorerBar.v3, Version=3.5.0.0, Culture=neutral, processorArchitecture=MSIL" />
+    <Reference Include="Janus.Windows.GridEX.v3, Version=3.5.0.0, Culture=neutral, processorArchitecture=MSIL" />
+    <Reference Include="Janus.Windows.Ribbon.v3, Version=3.5.0.0, Culture=neutral, processorArchitecture=MSIL" />
+    <Reference Include="Janus.Windows.UI.v3, Version=3.5.0.0, Culture=neutral, processorArchitecture=MSIL" />
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Design" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Xml.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Data" />
+    <Import Include="System.Drawing" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Linq" />
+    <Import Include="System.Windows.Forms" />
+    <Import Include="System.Xml.Linq" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ApplicationEvents.vb" />
+    <Compile Include="Business\ModStatistic.vb" />
+    <Compile Include="Business\ModuleIDCard.vb" />
+    <Compile Include="Business\ModUserMG.vb" />
+    <Compile Include="Business\ModValidation.vb" />
+    <Compile Include="CRVVerificationvBook.vb">
+      <DependentUpon>CRVVerificationvBook.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="CrvUtility\clsCrystalReport.vb" />
+    <Compile Include="CRVVerification.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CRVVerification.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="CRVVerificationv1.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CRVVerificationv1.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="DAO\DAOStatistic.vb" />
+    <Compile Include="DAO\GeneralDAO.vb" />
+    <Compile Include="DAO\IGeneralDAO.vb" />
+    <Compile Include="DataProvider\AbstractConnection.vb" />
+    <Compile Include="DataProvider\AbstractStatistic.vb" />
+    <Compile Include="DataProvider\IDataTransaction.vb" />
+    <Compile Include="DSIDVerification.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DSIDVerification.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DSIDVerification.vb">
+      <DependentUpon>DSIDVerification.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="ElectionCompare\ElectionComparetion.Designer.vb">
+      <DependentUpon>ElectionComparetion.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ElectionCompare\ElectionComparetion.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ElectionCompare\ViewImg.Designer.vb">
+      <DependentUpon>ViewImg.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ElectionCompare\ViewImg.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormVericationData.Designer.vb">
+      <DependentUpon>FormVericationData.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FormVericationData.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainApplicationForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainApplicationForm.Designer.vb">
+      <DependentUpon>MainApplicationForm.vb</DependentUpon>
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="My Project\Application.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="ReportPreview.Designer.vb">
+      <DependentUpon>ReportPreview.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ReportPreview.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ReportPrintOut.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ReportPrintOut.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ReportPrintOutV1.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ReportPrintOutV1.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ReportViewer.Designer.vb">
+      <DependentUpon>ReportViewer.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ReportViewer.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SearchPeople.Designer.vb">
+      <DependentUpon>SearchPeople.vb</DependentUpon>
+    </Compile>
+    <Compile Include="SearchPeople.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Statistic\KGBStatistic.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>KGBStatistic.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Statistic\StatisticPeopleDetail.vb">
+      <DependentUpon>StatisticPeopleDetail.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Statistic\StatisticAllProv.vb">
+      <DependentUpon>StatisticAllProv.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Statistic\StatisticPeopleFemale.vb">
+      <DependentUpon>StatisticPeopleFemale.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Statistic\StatisticPeopleFemalev1.vb">
+      <DependentUpon>StatisticPeopleFemalev1.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Statistic\StatisticPeoplev2.vb">
+      <DependentUpon>StatisticPeoplev2.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Statistic\StatisticPeopleV1.vb">
+      <DependentUpon>StatisticPeopleV1.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Statistic\IDCardStatistic.Designer.vb">
+      <DependentUpon>IDCardStatistic.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Statistic\IDCardStatistic.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Statistic\StatisticPeople.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>StatisticPeople.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Statistic\Vilage.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Vilage.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="UIReport.Designer.vb">
+      <DependentUpon>UIReport.vb</DependentUpon>
+    </Compile>
+    <Compile Include="UIReport.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UsersManagement\DashBoardUserManagement.Designer.vb">
+      <DependentUpon>DashBoardUserManagement.vb</DependentUpon>
+    </Compile>
+    <Compile Include="UsersManagement\DashBoardUserManagement.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UsersManagement\FormChangePwd.Designer.vb">
+      <DependentUpon>FormChangePwd.vb</DependentUpon>
+    </Compile>
+    <Compile Include="UsersManagement\FormChangePwd.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UsersManagement\IDCardLogin.designer.vb">
+      <DependentUpon>IDCardLogin.vb</DependentUpon>
+    </Compile>
+    <Compile Include="UsersManagement\IDCardLogin.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UsersManagement\NewUser.Designer.vb">
+      <DependentUpon>NewUser.vb</DependentUpon>
+    </Compile>
+    <Compile Include="UsersManagement\NewUser.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WellcomeForm\frmWelcome.designer.vb">
+      <DependentUpon>frmWelcome.vb</DependentUpon>
+    </Compile>
+    <Compile Include="WellcomeForm\frmWelcome.vb">
+      <SubType>Form</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="CRVVerificationvBook.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CRVVerificationvBook.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CRVVerification.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CRVVerification.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CRVVerificationv1.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CRVVerificationv1.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ElectionCompare\ElectionComparetion.resx">
+      <DependentUpon>ElectionComparetion.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ElectionCompare\ViewImg.resx">
+      <DependentUpon>ViewImg.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormVericationData.resx">
+      <DependentUpon>FormVericationData.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainApplicationForm.resx">
+      <DependentUpon>MainApplicationForm.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="My Project\licenses.licx" />
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReportPreview.resx">
+      <DependentUpon>ReportPreview.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReportPrintOut.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>ReportPrintOut.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReportPrintOutV1.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>ReportPrintOutV1.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReportViewer.resx">
+      <DependentUpon>ReportViewer.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SearchPeople.resx">
+      <DependentUpon>SearchPeople.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Statistic\KGBStatistic.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>KGBStatistic.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Statistic\StatisticPeopleDetail.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>StatisticPeopleDetail.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Statistic\StatisticAllProv.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>StatisticAllProv.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Statistic\StatisticPeopleFemale.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>StatisticPeopleFemale.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Statistic\StatisticPeopleFemalev1.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>StatisticPeopleFemalev1.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Statistic\StatisticPeoplev2.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>StatisticPeoplev2.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Statistic\StatisticPeopleV1.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>StatisticPeopleV1.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Statistic\IDCardStatistic.resx">
+      <DependentUpon>IDCardStatistic.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Statistic\StatisticPeople.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>StatisticPeople.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Statistic\Vilage.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>Vilage.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UIReport.resx">
+      <DependentUpon>UIReport.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UsersManagement\DashBoardUserManagement.resx">
+      <DependentUpon>DashBoardUserManagement.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UsersManagement\FormChangePwd.resx">
+      <DependentUpon>FormChangePwd.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UsersManagement\IDCardLogin.resx">
+      <DependentUpon>IDCardLogin.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UsersManagement\NewUser.resx">
+      <DependentUpon>NewUser.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WellcomeForm\frmWelcome.resx">
+      <DependentUpon>frmWelcome.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="DSIDVerification.xsc">
+      <DependentUpon>DSIDVerification.xsd</DependentUpon>
+    </None>
+    <None Include="DSIDVerification.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DSIDVerification.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="DSIDVerification.xss">
+      <DependentUpon>DSIDVerification.xsd</DependentUpon>
+    </None>
+    <None Include="My Project\app.manifest" />
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{967B4E0D-AD0C-4609-AB67-0FA40C0206D8}" />
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="AxCrystalActiveXReportViewerLib105">
+      <Guid>{A30B2DDF-C00F-469F-A23C-D6177608A128}</Guid>
+      <VersionMajor>10</VersionMajor>
+      <VersionMinor>5</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>aximp</WrapperTool>
+      <Isolated>False</Isolated>
+    </COMReference>
+    <COMReference Include="CrystalActiveXReportViewerLib105">
+      <Guid>{A30B2DDF-C00F-469F-A23C-D6177608A128}</Guid>
+      <VersionMajor>10</VersionMajor>
+      <VersionMinor>5</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+    </COMReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="1454069796_32.ID-Vertical.ico" />
+    <None Include="Resources\searching_image.gif" />
+    <None Include="Resources\searching.gif" />
+    <None Include="Resources\people.png" />
+    <None Include="Resources\computer.png" />
+    <None Include="Resources\Officer.png" />
+    <None Include="Resources\people %281%29.png" />
+    <None Include="Resources\up-arrow1.png" />
+    <None Include="Resources\arrow.png" />
+    <None Include="Resources\log2.png" />
+    <None Include="Resources\Logo1.png" />
+    <None Include="Resources\icon.png" />
+    <None Include="Resources\social.png" />
+    <None Include="Resources\close.png" />
+    <None Include="Resources\up-arrow.png" />
+    <None Include="Resources\loading-bar11.gif" />
+    <None Include="Resources\loading2222.gif" />
+    <None Include="Resources\first.png" />
+    <None Include="Resources\last.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.2.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 2.0 %28x86%29</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.0 %28x86%29</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
